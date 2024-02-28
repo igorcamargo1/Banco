@@ -9,8 +9,8 @@ import br.com.caelum.contas.Data;
 public class Principal {
 	public static void main(String[] args) {
 
-		Cliente cli1 = new Cliente("Igor", "34555677860");
-		Cliente cli2 = new Cliente("Raphael", "12345678900");
+		Cliente cli1 = new Cliente("Igor", "34555677860", 12345);
+		Cliente cli2 = new Cliente("Raphael", "12345678900", 12344);
 
 		Data d1 = new Data(20, 12, 2000);
 		Data d2 = new Data(14, 01, 2010);

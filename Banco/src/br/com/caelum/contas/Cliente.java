@@ -1,13 +1,25 @@
 package br.com.caelum.contas;
 
-public class Cliente {
-	public String nome;
-	private String cpf;
+import br.com.caelum.funcionarios.Autenticavel;
 
-	public Cliente(String nome, String cpf) {
+public class Cliente implements Autenticavel {
+	private String nome;
+	private String cpf;
+	private int senha;
+
+	public Cliente(String nome, String cpf, int senha) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
+		this.senha = senha;
+	}
+
+	@Override
+	public boolean autentica(int senha) {
+		if (this.senha == senha) {
+			return true;
+		}
+		return false;
 	}
 
 	// ------------------ getter and setters ---------------------
